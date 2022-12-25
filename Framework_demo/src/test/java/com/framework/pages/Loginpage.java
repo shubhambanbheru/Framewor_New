@@ -16,8 +16,9 @@ public class Loginpage {
 	}
 
 	@FindBy(name = "uid")
-	
+
 	WebElement username;
+
 	@FindBy(name = "password")
 	WebElement password;
 	@FindBy(xpath = "//input[@name=\"btnLogin\"]")
