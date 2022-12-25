@@ -20,6 +20,7 @@ public class LoginToGuru extends BaseClass {
 
 //	 Loginpage lp =new Loginpage(driver);
 //	 lp.logintoguru(useridapp, passapp);
+		
 		// or
 		
 		logger =report.createTest("Login to Guru");
