@@ -32,7 +32,8 @@ public class BaseClass {
 
 		excel = new ExcelDataProvider();
 		config = new ConfigDataProvider();
-		ExtentHtmlReporter extenthtml = new ExtentHtmlReporter(new File(System.getProperty("user.dir")) + "/Reports/loginp_"+Helper.getcurrentDateTime() +".html");
+		ExtentHtmlReporter extenthtml = new ExtentHtmlReporter(
+				new File(System.getProperty("user.dir")) + "/Reports/loginp_" + Helper.getcurrentDateTime() + ".html");
 		report = new ExtentReports();
 		report.attachReporter(extenthtml);
 
@@ -51,10 +52,11 @@ public class BaseClass {
 	@AfterMethod
 	public void getscreenshot(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			
-			logger.fail("Test failed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
-		} 
-		 
+
+			logger.fail("Test failed",
+					MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+		}
+
 		report.flush();
 
 	}
